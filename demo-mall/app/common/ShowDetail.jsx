@@ -11,7 +11,10 @@ export default class ShowDetail extends React.Component {
         };
         return (
             <div className="show-dialog">
-                <div className="header">{this.props.title}</div>
+                <div className="header">
+                    {this.props.title}
+                    <a onClick={this.props.remove}>&times;</a>
+                </div>
                 <div className="content">
                     {
                         map(this.props.data,(val,pro)=>(
@@ -21,7 +24,9 @@ export default class ShowDetail extends React.Component {
                         ))
                     }
                 </div>
-                <div className="footer text-align-center"><button onClick={this.props.remove}>关闭</button></div>
+                <div className="footer text-align-center">
+                    <button onClick={this.props.remove}>关闭</button>
+                </div>
             </div>
         );
     }

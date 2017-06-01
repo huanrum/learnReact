@@ -9,6 +9,9 @@ var config = {
         publicPath: '',
         filename: 'bundle.js'
     },
+     resolve: {
+        extensions: ['.vue','.ts','.jsx', '.js']
+    },
     module: {
         loaders: [
             // 为webpack指定loaders
@@ -33,16 +36,14 @@ var config = {
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new HtmlwebpackPlugin({
-            title: 'React '+ __dirname.split('\\').pop()
-        }),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
+            filename: 'index.html',
+            title: 'React '+ __dirname.split('\\').pop(),
+            template: path.resolve(__dirname, 'index.html'),
+            inject: true
         })
-    ]
+    ],
+    devtool: '#eval-source-map'
 };
 
 module.exports = config;

@@ -7,7 +7,7 @@ export default class MainMenu extends React.Component {
             <div className="main-menu">
                 <ul>
                     {
-                        this.props.menus.map(l=>(<li className={this.props.router.routes.indexOf(l)!==-1?'active':''}><Link to={l.path}>{l.title}</Link></li>))
+                        this.props.menus.map(l=>(<li className={this.props.router.routes.indexOf(l)!==-1?'active':''} key={l.path}><Link to={l.path}>{l.title}</Link></li>))
                     }
                 </ul>
             </div>

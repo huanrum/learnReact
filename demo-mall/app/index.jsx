@@ -21,4 +21,4 @@ ReactDOM.render((
             <Route path="/book" title="Book" component={Book}/>
         </Route>
     </Router>
-), document.body);
+), document.getElementById('app'));

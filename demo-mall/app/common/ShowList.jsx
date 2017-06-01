@@ -32,7 +32,7 @@ export default class ShowList extends React.Component {
         return (
             <div className="show-list">
                 {
-                    list.map(item=>(<ShowItem data={item} />))
+                    list.map((item,index)=>(<ShowItem key={index} data={item} />))
                 }
             </div>
         );

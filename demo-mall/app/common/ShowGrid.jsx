@@ -25,15 +25,15 @@ export default class ShowGrid extends React.Component {
                     <thead>
                         <tr>
                             {
-                                columns.map(c=>(<th>{c}</th>))
+                                columns.map(c=>(<th key={c}>{c}</th>))
                             }
                         </tr>
                     </thead>
                     <tbody>
                     {
-                        list.map(l=>(<tr onClick={()=>this.show(l)}>
+                        list.map((l,i)=>(<tr key={i} onClick={()=>this.show(l)}>
                             {
-                                columns.map(c=>(<td>{l[c]}</td>))
+                                columns.map(c=>(<td key={c}>{l[c]}</td>))
                             }
                         </tr>))
                     }

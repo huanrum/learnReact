@@ -1,6 +1,11 @@
 
-//var baseUrl = 'http://huanrum.oicp.net:23896/react/mall/';
-var baseUrl = 'http://192.168.1.248:8888/react/mall/'
+var baseUrl =  (function(){
+    if(/192\./.test(location.hostname) || location.hostname === '127.0.0.1' || location.hostname === 'localhost'){
+        return location.protocol +'//'+ location.hostname +':8888/react/mall/';
+    }else{
+        return 'http://huanrum.oicp.net:23896/react/mall/';
+    }
+})();
 
 if (typeof window.fetch === 'undefined') {
     window.fetch = function (url, option) {

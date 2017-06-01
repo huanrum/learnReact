@@ -1,3 +1,10 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: #42b983;
+}
 
 .main-left{
     position: fixed;
@@ -8,21 +15,43 @@
     color: #ffffff;
 }
 .main-right{
-    width: calc(100% - 16em);
+    width: calc(~"100% - 16em");
     float: right;
     .main-header{
         position: relative;
-    z-index: 11;
-    height: 3em;
-    border-bottom: 1px solid #d3d3d3;
-    .left{
+        z-index: 11;
+        height: 3em;
+        border-bottom: 1px solid #d3d3d3;
+        .left{
+            position: relative;
+            float: left;
+            a:not(:last-child):after{
+                content:'/';
+            }
+        }
+        .right{
+            position: relative;
+            float: right;
+            a{
+                margin: 0.2em 1em;
+            }
+        }
+    }
+}
 
-    }
-    .right{
-        position: relative;
-        display: inline-block;
-        float: right;
-    }
+.main-login{
+    background:transparent!important;
+    .content{
+        .contnet-item{
+            margin: 0.5em;
+            .title{
+                display: inline-block;
+                width:12em;
+            }
+            input{
+
+            }
+        }
     }
 }
 
