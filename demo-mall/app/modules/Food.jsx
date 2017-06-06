@@ -1,5 +1,5 @@
 import React from 'react';
-import ShowGrid from '../common/ShowGrid.jsx';
+import ShowGrid from '../common/ShowGrid';
 
 export default class Food extends React.Component {
     render() {

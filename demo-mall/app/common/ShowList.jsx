@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import http from './http.js';
-import ShowDetail from './ShowDetail.jsx';
+import http from './http';
+import ShowDetail from './ShowDetail';
 
 class ShowItem extends React.Component {
     render() {

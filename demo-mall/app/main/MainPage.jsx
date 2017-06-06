@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';
 
-import MainMenu from './main/MainMenu.jsx';
-import MainHeader from './main/MainHeader.jsx';
-import MainContent from './main/MainContent.jsx';
-import MainFooter from './main/MainFooter.jsx';
+import MainMenu from './MainMenu';
+import MainHeader from './MainHeader';
+import MainContent from './MainContent';
+import MainFooter from './MainFooter';
 
 export default class MainReact extends React.Component {
     render() {

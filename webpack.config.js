@@ -1,6 +1,6 @@
-var webpack = require('webpack');
+//var webpack = require('webpack');
 var path = require('path');                 //引入node的path库
-var HtmlwebpackPlugin = require('html-webpack-plugin');
+//var HtmlwebpackPlugin = require('html-webpack-plugin');
 
 var config = {
     entry: './app/index.jsx',
@@ -36,12 +36,12 @@ var config = {
         ]
     },
     plugins: [
-        new HtmlwebpackPlugin({
-            filename: 'index.html',
-            title: 'React '+ __dirname.split('\\').pop(),
-            template: path.resolve(__dirname, 'index.html'),
-            inject: true
-        })
+        // new HtmlwebpackPlugin({
+        //     filename: 'index.html',
+        //     title: 'React '+ __dirname.split('\\').pop(),
+        //     template: path.resolve(__dirname, 'index.html'),
+        //     inject: true
+        // })
     ],
     devtool: '#eval-source-map'
 };

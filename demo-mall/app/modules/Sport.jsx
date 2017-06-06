@@ -1,5 +1,5 @@
 import React from 'react';
-import ShowList from '../common/ShowList.jsx';
+import ShowList from '../common/ShowList';
 
 export default class Sport extends React.Component {
     render() {

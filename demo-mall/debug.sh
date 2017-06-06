@@ -3,8 +3,11 @@ REDCOLOR='\033[37;41m'
 GREENCOLOR='\033[34;42m'
 
 DIR=`pwd`
+NAME=$(basename "$DIR")
+TITLE="{headtitle}"
 
 cp "$DIR/../index.html" "$DIR/index.html"
+sed -i "s/$TITLE/$NAME/g" "$DIR/index.html"
 echo -e "$GREENCOLOR copy index.html.$NOCOLOR"
 echo -e " "
 
@@ -18,5 +21,3 @@ echo -e " "
 
 echo -e "$REDCOLOR node dev-server.js.$NOCOLOR"
 node dev-server.js --open --hot
-
-

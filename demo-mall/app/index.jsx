@@ -4,12 +4,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';
 
-import LoginReact from './Login.jsx';
-import AboutReact from './About.jsx';
-import MainReact from './Main.jsx';
-import Book from './modules/Book.jsx';
-import Food from './modules/Food.jsx';
-import Sport from './modules/Sport.jsx';
+import LoginReact from './Login';
+import AboutReact from './About';
+import MainReact from './main/MainPage';
+import Book from './modules/Book';
+import Food from './modules/Food';
+import Sport from './modules/Sport';
 
 ReactDOM.render((
     <Router history={hashHistory}>
