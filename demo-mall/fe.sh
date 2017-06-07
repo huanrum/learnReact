@@ -11,6 +11,10 @@ sed -i "s/$TITLE/$NAME/g" "$DIR/../build/$NAME/index.html"
 echo -e "$GREENCOLOR copy index.html.$NOCOLOR"
 echo -e " "
 
+cp -R "$DIR/assets/" "$DIR/../build/$NAME/assets/"
+echo -e "$GREENCOLOR copy assets.$NOCOLOR"
+echo -e " "
+
 cp "$DIR/../webpack.config.js" "$DIR/webpack.config.js"
 echo -e "$GREENCOLOR copy webpack.config.js.$NOCOLOR"
 echo -e " "
