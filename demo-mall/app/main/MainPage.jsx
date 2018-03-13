@@ -9,6 +9,11 @@ import MainFooter from './MainFooter';
 
 export default class MainReact extends React.Component {
     render() {
+        if(!localStorage['[react]/token']){
+            window.token = localStorage['[react]/token'];
+            setTimeout(()=>this.props.router.replace('/login'));
+            return (<div></div>);
+        }
         return (
             <div className="main-content">
                 <div className="main-left">

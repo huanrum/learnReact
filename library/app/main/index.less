@@ -1,0 +1,55 @@
+.main-header {
+    position: relative;
+    padding: 8px;
+    background: #2d293f;
+    color: #ffffff;
+    .main-header-back {
+        position: absolute;
+        vertical-align: middle;
+        line-height: 36px;
+        left: 8px;
+        top: 8px;
+        a {
+            margin: auto 8px;
+            border-left: 3px solid;
+            border-bottom: 3px solid;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            display: inline-block;
+        }
+    }
+    .main-header-title {
+        vertical-align: middle;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 600;
+    }
+    .main-header-toolbar {
+        position: absolute;
+        vertical-align: middle;
+        line-height: 36px;
+        right: 8px;
+        top: 8px;
+        a{
+            transform: rotate(90deg);
+        }
+        ul {
+            position: absolute;
+        }
+    }
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #d3d3d3;
+    padding: 8px 0;
+    .main-footer-button {
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+        font-weight: 600;
+    }
+}
