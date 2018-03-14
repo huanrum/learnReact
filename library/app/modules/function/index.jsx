@@ -9,7 +9,14 @@ export default class FunctionPage extends React.Component{
         return (
             <div className="function">
             {
-                (!this.props.children)&&this.props.route.childRoutes.map(router=><div className="function-button" key={router.path}><Link to={router.path}>{router.title}</Link></div>)
+                (!this.props.children)&&this.props.route.childRoutes.map(router=>(
+                    <div className="function-button" key={router.path} onClick={()=>this.props.router.push(router.path)}>
+                        <div className="image">
+                            <div>{router.title}</div>
+                        </div>
+                        <a>{router.title}</a>
+                    </div>
+                ))
             }
             {
                 this.props.children
