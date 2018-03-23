@@ -12,7 +12,7 @@ export default class BookPage extends React.Component{
         return (
             <div className="book">
                 <SearchPanl type="book" search={this.search} childItem={item=>(
-                    <div className="book-item">
+                    <div className="book-item" onClick={()=>alert(JSON.stringify(item))}>
                         <span>{item.id}</span>
                         <img src={item.src} />
                         <a>{item.name}</a>
